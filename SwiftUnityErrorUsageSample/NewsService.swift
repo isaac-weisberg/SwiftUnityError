@@ -12,7 +12,7 @@ class NewsService {
     typealias News = [String]
     
     enum Error: UnityError {
-        var unity: String {
+        var unity: UnityError.Emission {
             return "\(self) error"
         }
         
