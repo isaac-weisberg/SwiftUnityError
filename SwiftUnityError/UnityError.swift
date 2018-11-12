@@ -7,5 +7,5 @@
 //
 
 public protocol UnityError {
-    public var unity: Emission { get }
+    var unity: Emission { get }
 }
