@@ -6,9 +6,16 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5CB7CED52199C95500156EDC /* UnityError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB7CED42199C95500156EDC /* UnityError.swift */; };
+		5CB7CED72199C98B00156EDC /* Emission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB7CED62199C98B00156EDC /* Emission.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		5CB7CEC92199C84E00156EDC /* SwiftUnityError.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftUnityError.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CB7CECD2199C84E00156EDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CB7CED42199C95500156EDC /* UnityError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityError.swift; sourceTree = "<group>"; };
+		5CB7CED62199C98B00156EDC /* Emission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emission.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +49,8 @@
 			isa = PBXGroup;
 			children = (
 				5CB7CECD2199C84E00156EDC /* Info.plist */,
+				5CB7CED42199C95500156EDC /* UnityError.swift */,
+				5CB7CED62199C98B00156EDC /* Emission.swift */,
 			);
 			path = SwiftUnityError;
 			sourceTree = "<group>";
@@ -88,6 +97,7 @@
 				TargetAttributes = {
 					5CB7CEC82199C84E00156EDC = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -123,6 +133,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CB7CED72199C98B00156EDC /* Emission.swift in Sources */,
+				5CB7CED52199C95500156EDC /* UnityError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +266,7 @@
 		5CB7CED22199C84E00156EDC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -273,6 +286,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "net.caroline-weisberg.SwiftUnityError";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -281,6 +295,7 @@
 		5CB7CED32199C84E00156EDC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
