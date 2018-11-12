@@ -16,8 +16,20 @@ class NewsViewModel {
             gotSomeNews(
                 try newsService.getMeSomeNews()
             )
+        } catch let error as NewsService.ServiceError {
+            if case .networking = error {
+                networkingErrorOccured(error) // handle special cases without seeking the error tree
+                return // or not since in ideal UI, having a network problem can be easily treated twice
+            }
+            unityErrorOccured(error) // generic cases
         } catch {
+            // Aaaand it happend. Some idiot thrown something that is not UnityError compliant.
+            // Here is the most meme-ful part: we ain't gonna be propagating THAT piece of shit
+            // to GUI because it will only mean that we haven't learned shit ever since we have
+            // started using UnityError.
             
+            // Here is what must be done instead:
+            fatalError("Fuck you, idiot, why did I get \(error)")
         }
     }
     
