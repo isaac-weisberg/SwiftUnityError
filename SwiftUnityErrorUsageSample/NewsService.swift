@@ -38,6 +38,7 @@ class NewsService {
         // guarantees conformance of the error object to UnityError protocol.
         //
         // You are still REQUIRED to wrap instead of propagating directly, thus maintaining a tree!
+        //
         // This allows us to know, which chain of FAIE's might cummulatively produce which error in a static manner.
         // Note: not which chain of OBJECTS IN MEMORY-- you use a debugger for this one.
         
