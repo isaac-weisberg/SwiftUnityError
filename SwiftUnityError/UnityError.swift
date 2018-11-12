@@ -6,6 +6,6 @@
 //  Copyright © 2018 Isaac Weisberg. All rights reserved.
 //
 
-public protocol UnityError {
+public protocol UnityError: Error {
     var unity: Emission { get }
 }
