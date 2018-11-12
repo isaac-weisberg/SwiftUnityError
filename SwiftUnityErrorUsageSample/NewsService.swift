@@ -72,6 +72,8 @@ extension NewsService.ServiceError: UnityError {
          */
         if case .networking(let error) = self {
             return "\(self) error: \(error.unity)"
+            // Or, alternatively, delegate to the next leaf in the error tree
+            // return error.unity
         }
         
         /*
