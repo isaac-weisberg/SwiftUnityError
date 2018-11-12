@@ -14,7 +14,7 @@ class NewsService {
     var networkingService: NetworkingService!
     
     enum ServiceError: Error {
-        case networking(UnityError)
+        case networking(UnityError) // OR, even better, NetworkingService.NetworkingError, if you are sure
         case authorization
         case subscription
     }
